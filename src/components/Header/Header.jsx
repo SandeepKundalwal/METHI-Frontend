@@ -1,12 +1,14 @@
-import { headerLogo } from '../../assets/images';
+import { headerLogo, profilePic } from '../../assets/images';
 import { hamburger, hamburgerClose } from '../../assets/icons';
-import { links } from '../../constants';
+import { links, profileDropDown } from '../../constants';
 import { useState, useRef, useEffect } from 'react';
 
 import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    const [showDropdown, setShowDropdown] = useState(false);
 
     // if user clicks anywhere on the screen, hide the hamburger menu
     const ref = useRef();
@@ -31,47 +33,57 @@ const Header = () => {
             <nav ref={ref} className="flex justify-between items-center max-container">
                 <span className="font-montserrat text-[22px] text-black font-semibold">METHI</span>
                 <ul className="flex flex-4 justify-center items-center gap-16 max-lg:hidden">
-                    {links.map((item) => (
-                        <li key = {item.id}>
-                            <NavLink
-                                to = {item.href}
-                                className= {({isActive}) => `font-montserrat leading-normal text-lg font-semibold ${isActive ? "text-orange-600" :  "text-black"}`}
-                            >
-                                {item.label}
-                            </NavLink> 
-                        </li>
-                    ))}
-                </ul>
-                <div className="hidden max-lg:block">
-                    <img
-                        src={navbarOpen ? hamburgerClose : hamburger}
-                        alt="Hamburger"
-                        width={25}
-                        height={25}
-                        onClick={() => setNavbarOpen((prev) => !prev)}
-                        style={{cursor:'pointer', transition:'ease-in-out 2s'}}
-                    />
-                </div>
-            </nav>
-            {navbarOpen && (
-                <div className="fixed top-20 right-8 z-50 bg-white p-4 rounded-lg shadow-lg border-black" onClick= {() => setNavbarOpen(false)}>
-                    <nav>
-                        <ul className="flex-col hidden max-lg:block gap-6">
-                            {links.map((item) => (
-                                <li key= {item.id}>
-                                    <NavLink 
-                                        to= {item.href}
-                                        // className="font-montserrat font-semibold cursor-pointer text-black hover:text-blue-600"
-                                        
+                    {links.map((item) => {
+                        if(item.id === 5){
+                            if(isLoggedIn){
+                                return (<div key="profile" className="relative">
+                                    <img
+                                        src={profilePic}
+                                        alt="User Profile"
+                                        className="w-10 h-10 rounded-full cursor-pointer"
+                                        onClick={() => setShowDropdown(!showDropdown)}
+                                    />
+                                    {showDropdown && (
+                                        <div className="absolute top-12 right-0 z-10 bg-white shadow-md rounded-md">
+                                            <ul className="py-2">
+                                                {profileDropDown.map((profileItem) => {
+                                                    console.log(profileItem.label);
+                                                    return (<li key={profileItem.id}>
+                                                        <NavLink
+                                                            to= {profileDropDown.href}
+                                                        >
+                                                            {profileDropDown.label}
+                                                        </NavLink>
+                                                    </li>)
+                                                })}
+                                            </ul>
+                                        </div>
+                                    )}
+                                </div>)
+                            } else {
+                                return (<li key = {item.id}>
+                                    <NavLink
+                                        to = {item.href}
+                                        className= {({isActive}) => `font-montserrat leading-normal text-lg font-semibold ${isActive ? "text-orange-600" :  "text-black"}`}
                                     >
                                         {item.label}
-                                    </NavLink>
-                                </li>
-                            ))}
-                        </ul>
-                    </nav>
-                </div>
-            )}
+                                    </NavLink> 
+                                </li>)
+                            }
+                        } else {
+                            // console.log(item.label);
+                            return (<li key = {item.id}>
+                                <NavLink
+                                    to = {item.href}
+                                    className= {({isActive}) => `font-montserrat leading-normal text-lg font-semibold ${isActive ? "text-orange-600" :  "text-black"}`}
+                                >
+                                    {item.label}
+                                </NavLink> 
+                            </li>)
+                        }
+                    })}
+                </ul>
+            </nav>
         </header>
     )
 }
