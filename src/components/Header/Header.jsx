@@ -27,13 +27,13 @@ const Header = () => {
 
 
     return (
-        <header className="py-4 px-8 flex-col w-full bg-navbar z-10 overflow-hidden">
+        <header className="py-4 px-14 flex-col w-full bg-navbar z-10 overflow-hidden">
 
             {/* Desktop Navbar Menu */}
 
             <nav ref={ref} className="flex justify-between items-center">
                 <span className="font-montserrat text-[22px] text-black font-semibold">METHI</span>
-                <ul className="flex flex-4 justify-center items-center gap-16 max-lg:hidden">
+                <ul className="flex justify-center items-center gap-16 max-lg:hidden">
                     {links.map((item) => {
                         if(item.id === 5 && isLoggedIn){
                             return (<div key="profile" className="relative z-10">
@@ -63,7 +63,6 @@ const Header = () => {
                                 )}
                             </div>)
                         } else {
-                            // console.log(item.label);
                             return (<li key = {item.id}>
                                 <NavLink
                                     to = {item.href}
