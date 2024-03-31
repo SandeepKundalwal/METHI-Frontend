@@ -12,10 +12,10 @@ const profileDropDown = [
     { id: 3, href: "/", label: "Logout"}
 ]
 
-const projectSideTabs = [
-    { id: 1, href: "/", label: "METHI Project"},
-    { id: 2, href: "/", label: "AQM Project"},
-    { id: 3, href: "/", label: "Phishing Microworld"}
+const projects = [
+    { id: 1, href: "/dashboard", label: "METHI Project"},
+    { id: 2, href: "/dashboard", label: "AQM Project"},
+    { id: 3, href: "/dashboard", label: "Phishing Microworld"}
 ]
 
 const loginFields=[
@@ -84,4 +84,4 @@ const signupFields=[
     }
 ]
 
-export {links, profileDropDown, projectSideTabs, loginFields, signupFields};
+export {links, profileDropDown, projects, loginFields, signupFields};
