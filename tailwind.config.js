@@ -28,6 +28,7 @@ export default {
         'inprogress': "#C6DCF1",
         'done': "#A3E1B0",
         'card': "#DEEDF4",
+        'footer': "#F5F5F5",
         "white-400": "rgba(255, 255, 255, 0.80)"
       },
       boxShadow: {

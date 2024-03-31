@@ -1,18 +1,16 @@
-import { Header, Dashboard, Footer } from "./components/index.js";
+import { Header, Footer } from "./components/index.js";
 import { Outlet } from "react-router-dom";
 
 const App = () => (
-  <main className="relative">
+  <main className="min-h-screen flex flex-col">
     
     <Header />
 
-    <section className="xl:padding-1 wide:padding-r padding-b">
+    <section>
       <Outlet />
     </section>
 
-    <section className="padding">
-      <Footer />
-    </section>
+    <Footer />
 
   </main>
 );

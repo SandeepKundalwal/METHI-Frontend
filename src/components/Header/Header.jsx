@@ -27,49 +27,41 @@ const Header = () => {
 
 
     return (
-        <header className="py-4 px-8 absolute z-10 w-full bg-navbar">
+        <header className="py-4 px-8 flex-col w-full bg-navbar z-10 overflow-hidden">
+
             {/* Desktop Navbar Menu */}
 
-            <nav ref={ref} className="flex justify-between items-center max-container">
+            <nav ref={ref} className="flex justify-between items-center">
                 <span className="font-montserrat text-[22px] text-black font-semibold">METHI</span>
                 <ul className="flex flex-4 justify-center items-center gap-16 max-lg:hidden">
                     {links.map((item) => {
-                        if(item.id === 5){
-                            if(isLoggedIn){
-                                return (<div key="profile" className="relative">
-                                    <img
-                                        src={profilePic}
-                                        alt="User Profile"
-                                        className="w-10 h-10 rounded-full cursor-pointer"
-                                        onClick={() => setShowDropdown(!showDropdown)}
-                                    />
-                                    {showDropdown && (
-                                        <div className="absolute top-12 right-0 z-10 bg-white shadow-md rounded-md">
-                                            <ul className="py-2">
-                                                {profileDropDown.map((profileItem) => {
-                                                    console.log(profileItem.label);
-                                                    return (<li key={profileItem.id}>
+                        if(item.id === 5 && isLoggedIn){
+                            return (<div key="profile" className="relative z-10">
+                                <img
+                                    src={profilePic}
+                                    alt="User Profile"
+                                    className="w-10 h-10 z-10 rounded-full cursor-pointer"
+                                    onClick={() => setShowDropdown((prev) => !prev)}
+                                />
+                                {showDropdown && (
+                                    <div className="absolute top-12 right-0 z-10 bg-white shadow-md rounded-md">
+                                        <ul className="py-2 px-20 z-10 overflow-auto">
+                                            {profileDropDown.map((profileItem) => {
+                                                // console.log(profileItem.label);
+                                                return (
+                                                    <li key={profileItem.id} className='flex overflow-auto justify-evenly items-center text-black'>
                                                         <NavLink
-                                                            to= {profileDropDown.href}
+                                                            to= {profileItem.href}
                                                         >
-                                                            {profileDropDown.label}
+                                                            {profileItem.label}
                                                         </NavLink>
-                                                    </li>)
-                                                })}
-                                            </ul>
-                                        </div>
-                                    )}
-                                </div>)
-                            } else {
-                                return (<li key = {item.id}>
-                                    <NavLink
-                                        to = {item.href}
-                                        className= {({isActive}) => `font-montserrat leading-normal text-lg font-semibold ${isActive ? "text-orange-600" :  "text-black"}`}
-                                    >
-                                        {item.label}
-                                    </NavLink> 
-                                </li>)
-                            }
+                                                    </li>
+                                                )
+                                            })}
+                                        </ul>
+                                    </div>
+                                )}
+                            </div>)
                         } else {
                             // console.log(item.label);
                             return (<li key = {item.id}>

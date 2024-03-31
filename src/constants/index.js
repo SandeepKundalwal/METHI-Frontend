@@ -7,9 +7,15 @@ const links = [
 ];
 
 const profileDropDown = [
-    { id: 1, href: "/SandeepKundalwal", label: "View Profile"},
+    { id: 1, href: "/profile", label: "View Profile"},
     { id: 2, href: "/settings", label: "Settings"},
     { id: 3, href: "/", label: "Logout"}
+]
+
+const projectSideTabs = [
+    { id: 1, href: "/", label: "METHI Project"},
+    { id: 2, href: "/", label: "AQM Project"},
+    { id: 3, href: "/", label: "Phishing Microworld"}
 ]
 
 const loginFields=[
@@ -78,4 +84,4 @@ const signupFields=[
     }
 ]
 
-export {links, profileDropDown, loginFields, signupFields};
+export {links, profileDropDown, projectSideTabs, loginFields, signupFields};
