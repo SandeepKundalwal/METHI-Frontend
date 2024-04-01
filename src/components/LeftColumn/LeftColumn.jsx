@@ -41,13 +41,13 @@ const LeftColumn = () => {
 
     return (
         <div className="flex justify-center py-8">
-            <ul className="font-montserrat items-center">
+            <ul className="font-montserrat justify-center items-center">
                 {projects.map((project) => {
                     return (
                     <li 
-                    key={project.id}
-                    className={`py-6 text-xl  hover:font-bold font-semibold cursor-pointer ${selectedProject && project.id === selectedProject.id ? 'text-black' : 'text-gray-600'}`}
-                    onClick={() => handleProjectClick(project.id)}
+                        key={project.id}
+                        className={`py-6 text-xl ${selectedProject && project.id === selectedProject.id ? 'text-black font-bold' : 'text-gray-600 font-semibold'} cursor-pointer`}
+                        onClick={() => handleProjectClick(project.id)}
                     >
                         {project.label}
                     </li>)

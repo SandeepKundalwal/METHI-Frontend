@@ -6,7 +6,7 @@ const App = () => (
     
     <Header />
 
-    <section>
+    <section className="flex grow">
       <Outlet />
     </section>
 
