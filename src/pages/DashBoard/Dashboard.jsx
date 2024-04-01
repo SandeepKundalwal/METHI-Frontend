@@ -2,18 +2,22 @@ import { LeftColumn, MidColumn, RightColumn } from "../../components/";
 
 const Dashboard = () => {
     return (
-        <section className="flex flex-grow">
+        <section className="flex flex-col flex-grow">
             {/* Side-Bar Section */}
-            <div className="w-1/5 bg-sidebar">
-                <LeftColumn />
-            </div>    
+            <div className="flex flex-grow">
 
-            <div className="flex-grow bg-white">
-                <MidColumn />
-            </div>
-                
-            <div className="w-1/5 bg-white">
-                <RightColumn />
+            
+                <div className="w-1/4 bg-sidebar flex-grow">
+                    <LeftColumn />
+                </div>    
+
+                <div className="bg-white flex-grow">
+                    <MidColumn />
+                </div>
+                    
+                <div className="w-1/4 bg-white flex-grow">
+                    <RightColumn />
+                </div>
             </div>
         </section>
     )

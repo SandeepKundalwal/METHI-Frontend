@@ -27,7 +27,7 @@ const todos = [
     {userId: 1, id: 1, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
     {userId: 1, id: 2, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
     {userId: 1, id: 3, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
-    {userId: 1, id: 4, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
+    // {userId: 1, id: 4, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
     // {userId: 1, id: 5, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
     // {userId: 1, id: 6, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
 ]
@@ -35,8 +35,8 @@ const todos = [
 const inprogress = [
     {userId: 1, id: 1, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
     {userId: 1, id: 2, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
-    {userId: 1, id: 3, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
-    {userId: 1, id: 4, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
+    // {userId: 1, id: 3, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
+    // {userId: 1, id: 4, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
     // {userId: 1, id: 5, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
     // {userId: 1, id: 6, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
 ]
@@ -45,7 +45,7 @@ const done = [
     {userId: 1, id: 1, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
     {userId: 1, id: 2, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
     {userId: 1, id: 3, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
-    {userId: 1, id: 4, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
+    // {userId: 1, id: 4, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
     // {userId: 1, id: 5, title:"HeatMap Generation", description:"Generate heatmap generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-25")},
     // {userId: 1, id: 6, title:"Eye Data Capturing Module", description:"Generate eye data capturing generation module using Javascript", ticketDate: new Date("2024-03-25"), ticketEndDate: new Date("2024-04-01")},
 ]

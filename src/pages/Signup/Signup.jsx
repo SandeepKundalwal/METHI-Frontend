@@ -1,6 +1,10 @@
 const Signup = () => {
     return (
-        <>Signup</>
+        <section className="flex flex-col flex-grow">
+            <div className="justify-center items-center text-8xl fond-bold">
+                About
+            </div>
+        </section>
     )
 }
 
