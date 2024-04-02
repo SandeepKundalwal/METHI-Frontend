@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import { projects } from "../../constants";
 import { useState, useEffect } from "react";
 
@@ -9,7 +8,7 @@ const LeftColumn = () => {
     // useEffect = (() => {
     //     const fetchProjects = async () => {
     //         try {
-    //           const response = await axios.get('/projects');
+    //           const response = await axios.get('/${userId}/projects');
     //           setProjects(response.data);
     //         } catch (error) {
     //           console.error('Error fetching projects:', error);
@@ -32,11 +31,7 @@ const LeftColumn = () => {
     // };
 
     const handleProjectClick = (projectId) => {
-        projects.forEach(function (item) {
-            if(item.id === projectId){
-                setSelectedProject(item);
-            }
-        });
+        setSelectedProject(projectId);
     }
 
     return (
@@ -46,7 +41,7 @@ const LeftColumn = () => {
                     return (
                     <li 
                         key={project.id}
-                        className={`py-6 text-xl ${selectedProject && project.id === selectedProject.id ? 'text-black font-bold' : 'text-gray-600 font-semibold'} cursor-pointer`}
+                        className={`py-6 text-xl ${selectedProject && project.id === selectedProject ? 'text-black font-bold' : 'text-gray-600 font-semibold'} cursor-pointer`}
                         onClick={() => handleProjectClick(project.id)}
                     >
                         {project.label}

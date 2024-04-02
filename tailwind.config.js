@@ -24,9 +24,9 @@ export default {
       colors: {
         'navbar': "#7EC5E3",
         'sidebar': "#BAEAFF",
-        'todo': "#5BB2C5",
-        'inprogress': "#C6DCF1",
-        'done': "#A3E1B0",
+        'dark-blue': "#5BB2C5",
+        'light-purple': "#C6DCF1",
+        'light-green': "#A3E1B0",
         'card': "#DEEDF4",
         'footer': "#F5F5F5",
         "white-400": "rgba(255, 255, 255, 0.80)"
