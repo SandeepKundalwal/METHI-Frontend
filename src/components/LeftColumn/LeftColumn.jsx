@@ -3,32 +3,6 @@ import { useState, useEffect } from "react";
 
 const LeftColumn = () => {
     const [selectedProject, setSelectedProject] = useState(null);
-    // const [projects, setProjects] = useState([]);
-
-    // useEffect = (() => {
-    //     const fetchProjects = async () => {
-    //         try {
-    //           const response = await axios.get('/${userId}/projects');
-    //           setProjects(response.data);
-    //         } catch (error) {
-    //           console.error('Error fetching projects:', error);
-    //         }
-    //       };
-      
-    //       fetchProjects();
-    // }, [])
-
-    // const handleProjectClick = async () => {
-    //     try {
-    //         // Fetch data related to the selected project from the database
-    //         const response = await axios.get(`/projects/${projectId}`);
-    //         const projectData = response.data;
-      
-    //         setSelectedProject(projectData);
-    //     } catch (error) {
-    //         console.error('Error fetching project data:', error);
-    //     }
-    // };
 
     const handleProjectClick = (projectId) => {
         setSelectedProject(projectId);
